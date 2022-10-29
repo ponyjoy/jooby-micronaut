@@ -22,7 +22,7 @@ public class MicronautRegistry implements Registry {
         try {
             return ctx.getBean(type);
         } catch (NonUniqueBeanException ex) {
-            throw new RegistryException("获取`" + type.getName() + "`失败,原因 ：", ex);
+            throw new RegistryException("try to get `" + type.getName() + "` failed, reason:", ex.getMessage());
         }
     }
 
@@ -32,7 +32,7 @@ public class MicronautRegistry implements Registry {
         try {
             return ctx.getBean(type, Qualifiers.byName(name));
         } catch (NonUniqueBeanException ex) {
-            throw new RegistryException("获取`" + type.getName() + "`失败,原因 ：", ex);
+            throw new RegistryException("try to get `" + type.getName() + "` failed, reason:", ex.getMessage());
         }
     }
 
