@@ -8,7 +8,7 @@
     <artifactId>jooby-micronaut</artifactId>
     <version>1.0</version>
 
-    <name>jooby-enjoy</name>
+    <name>jooby-micronaut</name>
 
 
     <properties>
